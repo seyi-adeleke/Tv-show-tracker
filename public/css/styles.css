@@ -1,6 +1,7 @@
 body{
-    background-color: whitesmoke;
-    overflow-x: hidden;
+    background: #4ECDC4;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #556270, #4ECDC4);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #556270, #4ECDC4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 nav.navbar-tv-tracker { background: #fff; border-color: #ccc; box-shadow: 0 0 2px 0 #ccc; }
 nav.navbar-tv-tracker a { color: #f14444; }
@@ -85,15 +86,16 @@ nav.navbar-tv-tracker span.badge.new { background: rgba(255, 0, 0, 0.8); color: 
 
 }
 .result-text-left{
+    float: left;
     margin-left:30px;
-    width: 300px;
+    width: 200px;
 
 }
 .results:empty{
     display: none;
 }
 .results {
-
+    border: 1px solid  #4f5b66;
 }
 .fav-button{
     background-color: rgba(255, 0, 0, 0.8);

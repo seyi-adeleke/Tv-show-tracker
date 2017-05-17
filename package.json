@@ -10,9 +10,8 @@
   },
   "engines": {
     "node": "6.10.3",
-    "npm":"3.10.8"
+    "npm": "3.10.8"
   },
-
   "repository": {
     "type": "git"
   },
@@ -31,6 +30,10 @@
     "morgan": "^1.8.1",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
+    "request": "^2.81.0",
     "require": "^2.4.20"
+  },
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
   }
 }

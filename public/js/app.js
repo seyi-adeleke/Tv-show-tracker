@@ -16,18 +16,23 @@ angular.module('App',['ngSanitize'])
         vm.error=true;
 
         vm.search=function(){
+            vm.load = false;
             if(!vm.show){
+                vm.load = true;
                 vm.hideResult=true;
                 vm.error=false;
+
             }
             else if(vm.show){
                 $http.get("http://api.tvmaze.com/search/shows?q="+vm.show)
                     .then(function(response){
                         if(response.data.length == 0){
+                            vm.load = true;
                             vm.hideResult=true;
                             vm.error=false;
                         }
                         else{
+                            vm.load = true;
                             vm.error=true;
                             vm.hideResult=false;
                             vm.mydata = response.data[0];

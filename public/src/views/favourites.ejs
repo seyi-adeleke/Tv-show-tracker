@@ -9,37 +9,27 @@
     <% include ./partials/nav %>
 </header>
 <br>
+<br>
+<br>
+<p class="lead text-center">This is a list of your favourite series. </p>
+
 <section>
     <div class="container">
-        <div class="text-center">
-            <p class="lead">This is a list of your favourite series. </p>
-        </div>
-        <div>
-            <br />
-            <div class="container notes">
-                <div class="col-md-12 column list-group">
+
+                <div class="col-md-6 col-md-offset-3 column list-group">
                     <% series.forEach(function(show) { %>
                     <div class="list-group-item">
-                        <div> <%=show.name%></div>
+                        <p><b>Name</b>: <%=show.name%></p>
+                        <p><b>Current Status</b>: <%=show.status%></p>
+                        <p><b>Premier Date</b>: <%=show.premierDate%></p>
+                        <a href="/favourites/<%= show._id%>"> Get Info </a>
+
                     </div>
                     <% }); %>
-
                 </div>
-
             </div>
-        </div>
-    </div>
+
 </section>
-<br>
-<br>
-
-
-
-
-
-
-
-
 <script src="/public/vendor/jquery/dist/jquery.js"></script>
 <script src="/public/vendor/bootstrap/dist/js/bootstrap.js"></script>
 <script src="/public/vendor/angular/angular.min.js"></script>

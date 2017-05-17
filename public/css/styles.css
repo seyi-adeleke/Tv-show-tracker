@@ -96,7 +96,7 @@ nav.navbar-tv-tracker span.badge.new { background: rgba(255, 0, 0, 0.8); color: 
     display: none;
 }
 .results {
-    border: 1px solid  #4f5b66;
+   /* border: 1px solid  ;*/
 }
 .fav-button{
     background-color: rgba(255, 0, 0, 0.8);

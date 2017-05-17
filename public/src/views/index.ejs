@@ -30,8 +30,8 @@
 </section>
 <br>
 <br>
-
-<div ng-hide="main.hide">
+<p class="lead text-center" ng-hide="main.load">Searching...</p>
+<div ng-hide="main.hideResult">
     <div class="col-md-12"  class="results" >
         <div class="results">
             <div  class="result">
@@ -56,7 +56,7 @@
                 </div>
                 <div class='result-text-right'>
                     <div  ng-bind-html="main.mydata.show.summary"><b> Description:</b>{{main.mydata.show.summary}} </div>
-                    <img ng-src="{{main.mydata.show.image.medium}}" />"
+                    <img ng-src="{{main.mydata.show.image.medium}}" />
                 </div>
 
             </div>

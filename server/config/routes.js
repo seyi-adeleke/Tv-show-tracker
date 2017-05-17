@@ -44,16 +44,17 @@ module.exports = (app,passport)=>{
     });
 
     //favourites
-    app.get('/favourites',(req,res)=>{
+    app.get('/favourites',isLoggedIn,(req,res)=>{
         seriesController.list(req,res);
     })
 
 };
 
 
-let isLoggedIn = ()=>{
+function isLoggedIn(req, res, next) {
+    // if user is authenticated in the session, carry on
     if (req.isAuthenticated())
         return next();
     // if they aren't redirect them to the home page
     res.redirect('/');
-};
+}

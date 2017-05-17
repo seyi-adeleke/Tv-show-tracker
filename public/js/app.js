@@ -11,30 +11,34 @@ angular.module('App',['ngSanitize'])
 
     .controller('mainController', ['$http', function ($http) {
         var vm =this;
-        vm.hide=true;
+        vm.load = true;
+        vm.hideResult=true;
         vm.error=true;
+
         vm.search=function(){
-            if(vm.show){
-                vm.hide=false;
-                vm.error=true;
+            if(!vm.show){
+                vm.hideResult=true;
+                vm.error=false;
+            }
+            else if(vm.show){
                 $http.get("http://api.tvmaze.com/search/shows?q="+vm.show)
                     .then(function(response){
                         if(response.data.length == 0){
-                            vm.hide=true;
-                            console.log(response.data);
+                            vm.hideResult=true;
                             vm.error=false;
-                        }else{
-
-
+                        }
+                        else{
+                            vm.error=true;
+                            vm.hideResult=false;
                             vm.mydata = response.data[0];
-                            console.log(vm.mydata.score)
                         }
                     })
             }
             else{
-                vm.hide=true;
+                vm.hideResult=true;
                 vm.error=false;
             }
+
         };
         vm.saveFav=function(){
 

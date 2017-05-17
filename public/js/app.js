@@ -4,11 +4,9 @@ window.onload = function() {
             window.location.protocol = "http";
     });
 };
-
 var currentUser = (document.getElementById("user").innerHTML);
 
 angular.module('App',['ngSanitize'])
-
     .controller('mainController', ['$http', function ($http) {
         var vm =this;
         vm.load = true;
@@ -62,6 +60,18 @@ angular.module('App',['ngSanitize'])
                     console.log("no error");
                 })
 
+
+        }
+    }])
+    .controller('showController',['$http',function($http){
+        var vm = this;
+        vm.hide = true;
+        vm.search=function(param){
+            alert("I dey try " + param);
+            $http.get("http://api.tvmaze.com/search/shows?q="+param)
+            .then(function(response){
+                vm.mydata = response.data[0];
+            })
 
         }
     }]);

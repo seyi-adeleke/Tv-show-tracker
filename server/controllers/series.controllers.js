@@ -17,7 +17,8 @@ exports.createFav = function(req,res) {
 
     entry.save(function (err) {
         if (err) {
-            var errMsg = 'Sorry, there was an error saving your favorite. ' + err;
+            let errMsg = 'Sorry, there was an error saving your favorite. ' + err;
+
             res.render('/', {user: req.user, firstName: req.body.firstName, message: req.flash(errMsg)});
         }
         else {
@@ -26,4 +27,9 @@ exports.createFav = function(req,res) {
         }
     });
 
+};
+exports.getSeriesByID = function(req,res){
+    Series.findOne({_id:req.params.id}).exec(function(err,series){
+        res.render('show',{series: series, user : req.user})
+    })
 };

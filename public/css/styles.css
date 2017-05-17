@@ -1,0 +1,111 @@
+body{
+    background-color: whitesmoke;
+}
+nav.navbar-tv-tracker { background: #fff; border-color: #ccc; box-shadow: 0 0 2px 0 #ccc; }
+nav.navbar-tv-tracker a { color: #f14444; }
+nav.navbar-tv-tracker ul.navbar-nav a { color: #f14444; border-style: solid; border-width: 0 0 2px 0; border-color: #fff; }
+nav.navbar-tv-tracker ul.navbar-nav a:hover,
+nav.navbar-tv-tracker ul.navbar-nav a:visited,
+nav.navbar-tv-tracker ul.navbar-nav a:focus,
+nav.navbar-tv-tracker ul.navbar-nav a:active { background: #fff; }
+nav.navbar-tv-tracker ul.navbar-nav a:hover { border-color: #f14444; }
+nav.navbar-tv-tracker li.divider { background: #ccc; }
+nav.navbar-tv-tracker button.navbar-toggle { background: #f14444; border-radius: 2px; }
+nav.navbar-tv-tracker button.navbar-toggle:hover { background: #999; }
+nav.navbar-tv-tracker button.navbar-toggle > span.icon-bar { background: #fff; }
+nav.navbar-tv-tracker ul.dropdown-menu { border: 0; background: #fff; border-radius: 4px; margin: 4px 0; box-shadow: 0 0 4px 0 #ccc; }
+nav.navbar-tv-tracker ul.dropdown-menu > li > a { color: #444; }
+nav.navbar-tv-tracker ul.dropdown-menu > li > a:hover { background: #f14444; color: #fff; }
+nav.navbar-tv-tracker span.badge { background: #f14444; font-weight: normal; font-size: 11px; margin: 0 4px; }
+nav.navbar-tv-tracker span.badge.new { background: rgba(255, 0, 0, 0.8); color: #fff; }
+.login-button{
+    background-color:  rgba(255, 0, 0, 0.8);
+}
+.login-button:hover{
+    background-color: whitesmoke;
+    color: #0f0f0f;
+}
+.search-box{
+    margin-top: 100px;
+}
+
+
+#search-input {
+
+    padding: 0;
+}
+
+#search-input .search-query {
+    padding-right: 3px;
+    padding-right: 4px \9;
+    padding-left: 3px;
+    padding-left: 4px \9;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+#search-input button {
+    border: 0;
+    background: none;
+    /** belows styles are working good */
+    padding: 2px 5px;
+    margin-top: 2px;
+    position: relative;
+    left: -28px;
+    /* IE7-8 doesn't have border-radius, so don't indent the padding */
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color:#D9230F;
+}
+
+.search-query:focus + button {
+    z-index: 3;
+}
+
+
+.result{
+    background-color:white;
+    padding: 10px;
+    margin: 10px 5px 10px 5px;
+    font-size: larger;
+    display: flex;
+    text-align: justify;
+}
+
+.result-text-right{
+    float: right;
+    margin-left: 200px;
+
+}
+.result-text-left{
+    float: left;
+    margin-left:30px;
+    width: 200px;
+
+}
+.results:empty{
+    display: none;
+}
+.results {
+    border: 1px solid  #4f5b66;
+}
+.fav-button{
+    background-color: rgba(255, 0, 0, 0.8);
+}
+.fav-button:hover{
+    background-color: whitesmoke;
+    color: #0f0f0f;
+}
+#series-input{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+}

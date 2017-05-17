@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tv Series Tracker</title>
+    <% include ./partials/head %>
+</head>
+<body>
+<header>
+    <% include ./partials/nav %>
+</header>
+<br>
+<section>
+    <div class="container">
+        <div class="text-center">
+            <p class="lead">This is a list of your favourite series. </p>
+        </div>
+        <div>
+            <br />
+            <div class="container notes">
+                <div class="col-md-12 column list-group">
+                    <% series.forEach(function(show) { %>
+                    <div class="list-group-item">
+                        <div> <%=show.name%></div>
+                    </div>
+                    <% }); %>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+<br>
+<br>
+
+
+
+
+
+
+
+
+<script src="/public/vendor/jquery/dist/jquery.js"></script>
+<script src="/public/vendor/bootstrap/dist/js/bootstrap.js"></script>
+<script src="/public/vendor/angular/angular.min.js"></script>
+<script src="/public/vendor/angular-sanitize/angular-sanitize.min.js"></script>
+<script src="/public/js/app.js"></script>
+</body>
+</html>

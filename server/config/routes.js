@@ -10,7 +10,7 @@ module.exports = (app,passport)=>{
         });
     });
 
-    app.post('/', function(req,res){
+    app.post('/', (req,res)=>{
         return seriesController.createFav(req,res);
     });
 
@@ -46,7 +46,10 @@ module.exports = (app,passport)=>{
     //favourites
     app.get('/favourites',isLoggedIn,(req,res)=>{
         seriesController.list(req,res);
-    })
+    });
+    app.get('/favourites/:id',isLoggedIn,(req,res)=>{
+        return  seriesController.getSeriesByID(req,res);
+    });
 
 };
 

@@ -109,3 +109,6 @@ nav.navbar-tv-tracker span.badge.new { background: rgba(255, 0, 0, 0.8); color: 
     font-family: inherit;
     font-size: inherit;
 }
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none !important;
+}

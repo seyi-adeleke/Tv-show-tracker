@@ -2,10 +2,11 @@ body{
     background: #4ECDC4;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #556270, #4ECDC4);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #556270, #4ECDC4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    overflow-x: hidden;
 }
 nav.navbar-tv-tracker { background: #fff; border-color: #ccc; box-shadow: 0 0 2px 0 #ccc; }
-nav.navbar-tv-tracker a { color: #f14444; }
-nav.navbar-tv-tracker ul.navbar-nav a { color: #f14444; border-style: solid; border-width: 0 0 2px 0; border-color: #fff; }
+nav.navbar-tv-tracker a { color: #4ECDC4; }
+nav.navbar-tv-tracker ul.navbar-nav a { color: #4ECDC4; border-style: solid; border-width: 0 0 2px 0; border-color: #fff; }
 nav.navbar-tv-tracker ul.navbar-nav a:hover,
 nav.navbar-tv-tracker ul.navbar-nav a:visited,
 nav.navbar-tv-tracker ul.navbar-nav a:focus,

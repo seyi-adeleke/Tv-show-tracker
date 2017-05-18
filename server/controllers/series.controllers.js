@@ -25,7 +25,6 @@ exports.createFav = function(req,res) {
             }
         });
 };
-
 exports.getSeriesByID = function(req,res){
     Series.findOne({_id:req.params.id}).exec(function(err,series){
         res.render('show',{series: series, user : req.user})

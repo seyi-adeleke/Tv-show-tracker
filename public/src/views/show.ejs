@@ -16,26 +16,18 @@
 
 <div class="row">
    <div class="col-md-6 col-md-offset-3 text-center">
-       <div ng-hide="">
-    <div class="col-md-12"  class="results" >
-        <div class="results">
-            <div  class="result">
-                <div class="result-text-left">
-                    <div><b>Name: </b> <%= series.name%></div>
-                    <div><b>Status: </b> <%= series.status%> </div>
-                    <div><b>Premier Date: </b><%= series.premierDate%></div>
-                    <button  class="btn btn-primary btn-lg login-button" ng-click="show.search('<%= series.name%>')"> Get More Info </button>
-                </div>
-                <div class='result-text-right'>
-                    <div  ng-bind-html="show.mydata.show.summary"><b> Description:</b>{{show.mydata.show.summary}} </div>
-                    <img ng-src="{{show.mydata.show.image.medium}}" />
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-
+       <div  class="shows well well-lg">
+           <div class="show-text-left">
+               <div><b>Name: </b> <%= series.name%></div>
+               <div><b>Status: </b> <%= series.status%> </div>
+               <div><b>Premier Date:</b><%= series.premierDate%></div>
+               <button  class="btn btn-primary btn-lg login-button" ng-click="show.search('<%= series.name%>')"> Get More Info </button>
+           </div>
+           <div class='show-text-right'>
+               <div  ng-bind-html="show.mydata.show.summary"><b> Description:</b>{{show.mydata.show.summary}} </div>
+               <img ng-src="{{show.mydata.show.image.medium}}" />
+           </div>
+       </div>
    </div>
 </div>
 

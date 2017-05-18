@@ -21,7 +21,7 @@ module.exports = (app,config,passport) => {
     app.set('view engine', 'ejs');
 
 
-    app.use(session({ secret: 'ilovescotchscotchyscotchscotch' }));
+    app.use(session({ secret: 'thisisthesupersecretsessioncodekey' }));
     app.use(passport.initialize());
     app.use(passport.session());
     app.use(flash());

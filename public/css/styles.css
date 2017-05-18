@@ -1,5 +1,6 @@
 body{
-    background: #4ECDC4;  /* fallback for old browsers */
+    background-image: url("../assets/background-53607fca1b7d83c3b69be79675a15ac6b82dfa1e86f8d5aab64aec1b37084ab5.jpg");
+    background: #4ECDC4;
     background: -webkit-linear-gradient(to right, #556270, #4ECDC4);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #556270, #4ECDC4); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     overflow-x: hidden;
@@ -144,4 +145,7 @@ nav.navbar-tv-tracker span.badge.new { background: rgba(255, 0, 0, 0.8); color: 
     font-size: larger;
     display: flex;
     text-align: justify;
+}
+.signup-form{
+    background-color: white;
 }

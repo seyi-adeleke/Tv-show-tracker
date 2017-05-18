@@ -35,6 +35,8 @@ angular.module('App',['ngSanitize'])
                             vm.hideResult=false;
                             vm.mydata = response.data[0];
                         }
+                    },function(errorMessage){
+                        alert("There was an error" + errorMessage)
                     })
             }
             else{
@@ -67,10 +69,11 @@ angular.module('App',['ngSanitize'])
         var vm = this;
         vm.hide = true;
         vm.search=function(param){
-            alert("I dey try " + param);
             $http.get("http://api.tvmaze.com/search/shows?q="+param)
             .then(function(response){
                 vm.mydata = response.data[0];
+            },function(response){
+                alert("error " + response);
             })
 
         }

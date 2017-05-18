@@ -73,17 +73,20 @@ nav.navbar-tv-tracker span.badge.new { background: rgba(255, 0, 0, 0.8); color: 
 
 
 .result{
-    background-color:white;
+    background-color:whitesmoke;
     padding: 10px;
     margin: 10px 5px 10px 5px;
     font-size: larger;
     display: flex;
     text-align: justify;
+    opacity: 0.8;
+    border-radius: 40px;
+
 }
 
 .result-text-right{
     float: right;
-    margin-left: 200px;
+    margin-left: 100px;
 
 }
 .result-text-left{
@@ -114,4 +117,31 @@ nav.navbar-tv-tracker span.badge.new { background: rgba(255, 0, 0, 0.8); color: 
 }
 [ng\:cloak], [ng-cloak], .ng-cloak {
     display: none !important;
+}
+
+.show-text-left{
+    float: left;
+    margin-left:30px;
+
+
+}
+.show-text-right{
+    float: right;
+    margin-left:30px;
+    text-align: justify;
+}
+.well{
+    border: 2px solid grey;
+    opacity: 0.8;
+    width: 600px;
+    height: auto;
+
+}
+
+.shows{
+    padding: 1px;
+    margin: 10px 5px 10px 5px;
+    font-size: larger;
+    display: flex;
+    text-align: justify;
 }

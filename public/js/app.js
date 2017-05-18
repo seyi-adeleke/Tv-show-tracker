@@ -12,8 +12,9 @@ angular.module('App',['ngSanitize'])
         vm.load = true;
         vm.hideResult=true;
         vm.error=true;
-
+        vm.errorfromServer=true;
         vm.search=function(){
+            vm.errorfromServer=true;
             vm.load = false;
             if(!vm.show){
                 vm.load = true;
@@ -34,9 +35,15 @@ angular.module('App',['ngSanitize'])
                             vm.error=true;
                             vm.hideResult=false;
                             vm.mydata = response.data[0];
+                            vm.errorfromServer=true;
+
                         }
                     },function(errorMessage){
-                        alert("There was an error" + errorMessage)
+                        vm.errorfromServer=false;
+                        vm.load = true;
+                        vm.hideResult=true;
+
+
                     })
             }
             else{

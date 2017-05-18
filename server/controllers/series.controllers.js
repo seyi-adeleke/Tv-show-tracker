@@ -22,9 +22,10 @@ exports.createFav = function(req,res) {
         else{
             console.log('Your favourite was saved correctly');
             res.redirect('/favourites');
-            }
-        });
+        }
+    });
 };
+
 exports.getSeriesByID = function(req,res){
     Series.findOne({_id:req.params.id}).exec(function(err,series){
         res.render('show',{series: series, user : req.user})

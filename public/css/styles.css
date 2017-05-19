@@ -25,10 +25,7 @@ nav.navbar-tv-tracker span.badge.new { background: rgba(255, 0, 0, 0.8); color: 
 .login-button{
     background-color:  rgba(255, 0, 0, 0.8);
 }
-.login-button:hover{
-    background-color: whitesmoke;
-    color: #0f0f0f;
-}
+
 .search-box{
     margin-top: 100px;
 }
@@ -112,10 +109,7 @@ nav.navbar-tv-tracker span.badge.new { background: rgba(255, 0, 0, 0.8); color: 
 .fav-button{
     background-color: rgba(255, 0, 0, 0.8);
 }
-.fav-button:hover{
-    background-color: whitesmoke;
-    color: #0f0f0f;
-}
+
 #series-input{
     border: none;
     outline: none;

@@ -4,10 +4,10 @@ window.onload = function() {
             window.location.protocol = "http";
     });
 };
-var currentUser = (document.getElementById("user").innerHTML);
+var currentUser = (document.getElementById("user").innerText);
 
 angular.module('App',['ngSanitize'])
-    .controller('mainController', ['$http', function ($http) {
+    .controller('mainController', ['$http','$location', function ($http,$location) {
         var vm =this;
         vm.load = true;
         vm.hideResult=true;
@@ -53,35 +53,36 @@ angular.module('App',['ngSanitize'])
 
         };
         vm.saveFav=function(){
-
-            var data = ({
-                user:currentUser,
-                name:vm.name,
-                premierDate:vm.premierDate,
-                status:vm.status
+            $http.get("http://api.tvmaze.com/search/shows?q="+vm.show)
+            .then(function(response){
+                var data=({
+                    user:currentUser,
+                    name:response.data[0].show.name,
+                    premierDate:response.data[0].show.premiered,
+                    status:response.data[0].show.status
+                });
+                $http.post("/", data);
+                alert("Your show has been saved")
             });
-            console.log(data);
-            $http.post('/', data)
-                .error(function(){
-                    console.log("error ya bish")
-                })
-                .success(function(){
-                    console.log("no error");
-                })
-
 
         }
     }])
     .controller('showController',['$http',function($http){
         var vm = this;
         vm.hide = true;
+        vm.errorfromServer=true;
+
         vm.search=function(param){
             $http.get("http://api.tvmaze.com/search/shows?q="+param)
             .then(function(response){
                 vm.mydata = response.data[0];
             },function(response){
-                alert("error " + response);
+                vm.errorfromServer=false;
+                console.log(response);
             })
 
         }
     }]);
+
+
+

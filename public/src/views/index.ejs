@@ -36,9 +36,11 @@
         <div class="results">
             <div  class="result">
                 <div class="result-text-left ">
-                    <div><p><b>Name: </b> {{main.mydata.show.name}}</p></div>
-                    <div><p><b>Status: </b> {{main.mydata.show.status}}</p> </div>
-                    <div><p><b>Premier Date: </b> {{main.mydata.show.premiered}}</p></div>
+                    <div class="left-result">
+                        <div><p><b>Name: </b> {{main.mydata.show.name}}</p></div>
+                        <div><p><b>Status: </b> {{main.mydata.show.status}}</p> </div>
+                        <div><p><b>Premier Date: </b> {{main.mydata.show.premiered}}</p></div>
+                    </div>
                    <div><%- user ?
                        "<button ng-click='main.saveFav(favourites)' class='btn btn-primary btn-lg fav-button' type='submit' >"+ 'Add To favourites'+"</button>"
                                 : '' %>

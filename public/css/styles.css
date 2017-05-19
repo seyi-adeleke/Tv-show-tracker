@@ -87,14 +87,21 @@ nav.navbar-tv-tracker span.badge.new { background: rgba(255, 0, 0, 0.8); color: 
 
 .result-text-right{
     float: right;
-    margin-left: 100px;
+    margin-left: 80px;
+    padding-left: 10px;
+    border-left: 1px solid grey;
 
+
+
+}
+.left-result{
+    border-bottom: 1px solid grey;
+    margin-bottom: 10px;
 }
 .result-text-left{
     float: left;
     margin-left:30px;
     width: 200px;
-
 }
 .results:empty{
     display: none;

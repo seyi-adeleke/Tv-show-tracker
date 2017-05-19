@@ -5,6 +5,7 @@
     <% include ./partials/head %>
 </head>
 <body ng-app="App" ng-controller="mainController as main" class="ng-cloak">
+
 <header>
     <% include ./partials/nav %>
 </header>
@@ -16,7 +17,7 @@
                 <h2 class="text-center">Search for your Favourite Series</h2>
                 <div id="search-input">
                     <div class="input-group col-md-12">
-                        <input type="text" ng-model="main.show" class="search-query form-control" placeholder="Search here for example 'Friends'" />
+                        <input type="text" ng-model="main.show" class="search-query form-control" placeholder="Type here, for example 'Friends'" />
                         <span class="input-group-btn">
                             <button  class="btn btn-danger" id="search-button" type="submit">
                                 <span class="glyphicon glyphicon-search"></span>
@@ -38,18 +39,9 @@
                     <div><p><b>Name: </b> {{main.mydata.show.name}}</p></div>
                     <div><p><b>Status: </b> {{main.mydata.show.status}}</p> </div>
                     <div><p><b>Premier Date: </b> {{main.mydata.show.premiered}}</p></div>
-                   <div><%- user ? "<form action='/' method='post'>"+
-                       "<div class='form-group'>"+
-                       "<input required placeholder='Name' type='text' class='form-control' name='name'>"
-                       +"</div>"+
-                       "<div class='form-group'>"+
-                       "<input required placeholder='Status' type='text' class='form-control' name='status'>"
-                       +"</div>"+
-                       "<div class='form-group'>"+
-                       "<input required placeholder='Premier Date' type='text' class='form-control' name='premierDate'>"
-                       +"</div>"+
-                       "<button class='btn btn-primary btn-lg fav-button' type='submit' >"+ 'Add To favourites'+"</button>"
-                               +"</form>" : '' %>
+                   <div><%- user ?
+                       "<button ng-click='main.saveFav(favourites)' class='btn btn-primary btn-lg fav-button' type='submit' >"+ 'Add To favourites'+"</button>"
+                                : '' %>
 
                    </div>
 
